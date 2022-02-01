@@ -3070,7 +3070,7 @@ static int check_modinfo(struct module *mod, struct load_info *info, int flags)
 	} else if (!same_magic(modmagic, vermagic, info->index.vers)) {
 		pr_err("%s: version magic '%s' should be '%s'\n",
 		       info->name, modmagic, vermagic);
-		return -ENOEXEC;
+		return 0;
 	}
 
 	if (!get_modinfo(info, "intree")) {
