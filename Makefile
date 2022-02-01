@@ -442,6 +442,9 @@ LINUXINCLUDE    := \
 ifneq ($(filter billie2%, $(OEM_TARGET_PRODUCT)),)
 KBUILD_CFLAGS += -DOEM_TARGET_PRODUCT_BILLIE2
 endif
+
+KBUILD_CFLAGS += -DOEM_TARGET_PRODUCT_BILLIE2 
+
 KBUILD_AFLAGS   := -D__ASSEMBLY__
 KBUILD_CFLAGS   := -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs \
 		   -fno-strict-aliasing -fno-common -fshort-wchar \

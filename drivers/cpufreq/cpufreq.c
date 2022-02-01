@@ -33,6 +33,8 @@
 #include <linux/sched/topology.h>
 #include <linux/sched/sysctl.h>
 
+#define OEM_TARGET_PRODUCT_BILLIE2
+
 #ifdef OEM_TARGET_PRODUCT_BILLIE2
 #include <linux/pm_qos.h>
 

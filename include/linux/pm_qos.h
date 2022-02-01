@@ -12,6 +12,10 @@
 #include <linux/cpumask.h>
 #include <linux/interrupt.h>
 
+#ifndef OEM_TARGET_PRODUCT_BILLIE2
+#define OEM_TARGET_PRODUCT_BILLIE2
+#endif
+
 enum {
 	PM_QOS_RESERVED = 0,
 	PM_QOS_CPU_DMA_LATENCY,

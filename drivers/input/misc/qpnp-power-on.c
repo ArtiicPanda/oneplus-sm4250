@@ -1278,9 +1278,9 @@ static void press_work_func(struct kthread_work *work)
 	if ((pon_rt_sts & QPNP_PON_KPDPWR_N_SET) == 1) {
 		qpnp_powerkey_state_check(pon, 1);
 		dev_err(pon->dev, "after 4s Power-Key is still DOWN\n");
-		display_bl = dsi_panel_backlight_get();
+		// display_bl = dsi_panel_backlight_get();
 		boot_mode = get_boot_mode();
-		if (display_bl == 0 && boot_mode == MSM_BOOT_MODE_NORMAL) {
+		if (/* display_bl == 0 && */ boot_mode == MSM_BOOT_MODE_NORMAL) {
 			oem_force_minidump_mode();
 			get_init_sched_info();
 			show_state_filter(TASK_UNINTERRUPTIBLE);

@@ -71,6 +71,8 @@
 #define	MEMPLUS_SWAPIN_ANON_MEMORY _IOWR('a',  3, unsigned long)
 #define	MEMPLUS_GET_AVAILABLE_SWAP_SPACE _IOWR('a',  4, unsigned long)
 
+#define OEM_TARGET_PRODUCT_BILLIE2
+
 #ifdef OEM_TARGET_PRODUCT_BILLIE2
 #ifdef CONFIG_DRM_PANEL
 #undef CONFIG_DRM_PANEL
@@ -144,7 +146,7 @@ static inline bool current_is_gcd(void)
 	return current == gc_tsk;
 }
 
-bool ctech_current_is_swapind() {
+bool ctech_current_is_swapind(void) {
 	return current == swapind_tsk;
 }
 

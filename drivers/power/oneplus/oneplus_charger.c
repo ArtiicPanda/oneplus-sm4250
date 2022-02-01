@@ -1520,7 +1520,7 @@ int oneplus_chg_init(struct oneplus_chg_chip *chip)
 #ifdef CONFIG_FB
 	chip->chg_fb_notify.notifier_call = fb_notifier_callback;
 #ifdef CONFIG_DRM_MSM
-	rc = msm_drm_register_client(&chip->chg_fb_notify);
+	// rc = msm_drm_register_client(&chip->chg_fb_notify);
 #else
 	rc = fb_register_client(&chip->chg_fb_notify);
 #endif /*CONFIG_DRM_MSM*/

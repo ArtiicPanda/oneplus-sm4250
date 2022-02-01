@@ -24,6 +24,8 @@
 #include <oneplus/houston/houston_helper.h>
 #endif
 
+#define OEM_TARGET_PRODUCT_BILLIE2
+
 struct sugov_tunables {
 	struct gov_attr_set	attr_set;
 	unsigned int		up_rate_limit_us;
